@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { Pickaxe, Wallet, FileCode2, GitBranch, Github, ShieldCheck } from 'lucide-react';
+import { Pickaxe, Wallet, FileCode2, GitBranch, Github, ShieldCheck, Download } from 'lucide-react';
 import { cn } from '@/lib/utils';
 
 export const NAV = [
@@ -9,6 +9,7 @@ export const NAV = [
   { to: '/contracts', icon: FileCode2, label: 'Smart Contracts' },
   { to: '/qips', icon: GitBranch, label: 'Network QIPs' },
   { to: '/github', icon: Github, label: 'GitHub' },
+  { to: '/downloads', icon: Download, label: 'Downloads' },
 ];
 
 export default function ModeRail() {

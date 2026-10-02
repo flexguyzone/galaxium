@@ -13,6 +13,7 @@ import WalletPage from '@/pages/Wallet';
 import SmartContractsPage from '@/pages/SmartContracts';
 import QIPsPage from '@/pages/QIPs';
 import GitHubPage from '@/pages/GitHubPage';
+import Downloads from '@/pages/Downloads';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -47,6 +48,7 @@ const AuthenticatedApp = () => {
         <Route path="/contracts" element={<SmartContractsPage />} />
         <Route path="/qips" element={<QIPsPage />} />
         <Route path="/github" element={<GitHubPage />} />
+        <Route path="/downloads" element={<Downloads />} />
       </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
