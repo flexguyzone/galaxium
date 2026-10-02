@@ -3,7 +3,7 @@ const path = require('path');
 
 // Where the Galaxium web app is hosted. Update after publishing,
 // or set the GALAXIUM_APP_URL environment variable.
-const APP_URL = process.env.GALAXIUM_APP_URL || 'https://galaxium.base44.app';
+const APP_URL = process.env.GALAXIUM_APP_URL || 'https://galaxium-quantum-core.base44.app';
 
 function createWindow() {
   const win = new BrowserWindow({
