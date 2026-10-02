@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Activity, Cpu, ShieldCheck, Network, Play, Square } from 'lucide-react';
+import InstallButton from '@/components/InstallButton';
 import { useGalaxium } from '@/hooks/useGalaxium';
 import { NAV } from './ModeRail';
 import { fmt } from '@/lib/galaxium';
@@ -37,6 +38,7 @@ export default function StatusBar() {
       </div>
 
       <div className="ml-auto flex items-center gap-3">
+        <InstallButton className="hidden lg:flex" />
         <button
           onClick={toggleMining}
           className={cn(

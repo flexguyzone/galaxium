@@ -6,3 +6,10 @@ import '@/index.css'
 ReactDOM.createRoot(document.getElementById('root')).render(
   <App />
 )
+
+// Register the PWA service worker (enables "Install" on Windows desktop)
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/sw.js').catch(() => {});
+  });
+}
