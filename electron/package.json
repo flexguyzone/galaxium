@@ -23,7 +23,7 @@
     "icon": "icon.png",
     "win": {
       "target": ["nsis"],
-      "artifactName": "Galaxium-Setup-${version}.exe"
+      "artifactName": "Galaxium-Setup.exe"
     },
     "nsis": {
       "oneClick": false,
