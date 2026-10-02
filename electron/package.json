@@ -1,0 +1,36 @@
+{
+  "name": "galaxium",
+  "version": "1.4.2",
+  "description": "Galaxium — Quantum-Resistant Mining Ecosystem (Windows desktop app)",
+  "main": "main.js",
+  "author": "Galaxium",
+  "license": "MIT",
+  "scripts": {
+    "start": "electron .",
+    "dist": "electron-builder --win"
+  },
+  "devDependencies": {
+    "electron": "^33.2.0",
+    "electron-builder": "^25.1.8"
+  },
+  "build": {
+    "appId": "app.galaxium.desktop",
+    "productName": "Galaxium",
+    "files": [
+      "main.js",
+      "icon.png"
+    ],
+    "icon": "icon.png",
+    "win": {
+      "target": ["nsis"],
+      "artifactName": "Galaxium-Setup-${version}.exe"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "Galaxium"
+    }
+  }
+}
