@@ -7,6 +7,11 @@ import { AuthProvider, useAuth } from '@/lib/AuthContext';
 import UserNotRegisteredError from '@/components/UserNotRegisteredError';
 import ScrollToTop from './components/ScrollToTop';
 // Add page imports here
+import GalaxiumLayout from '@/components/galaxium/Layout';
+import Home from '@/pages/Home';
+import WalletPage from '@/pages/Wallet';
+import SmartContractsPage from '@/pages/SmartContracts';
+import QIPsPage from '@/pages/QIPs';
 
 const AuthenticatedApp = () => {
   const { isLoadingAuth, isLoadingPublicSettings, authError, navigateToLogin } = useAuth();
@@ -35,6 +40,12 @@ const AuthenticatedApp = () => {
   return (
     <Routes>
       {/* Add your page Route elements here */}
+      <Route element={<GalaxiumLayout />}>
+        <Route path="/" element={<Home />} />
+        <Route path="/wallet" element={<WalletPage />} />
+        <Route path="/contracts" element={<SmartContractsPage />} />
+        <Route path="/qips" element={<QIPsPage />} />
+      </Route>
       <Route path="*" element={<PageNotFound />} />
     </Routes>
   );
